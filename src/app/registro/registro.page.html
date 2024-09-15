@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Registrarse
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form class="formulario" [formGroup]="formRegistro">
+        <ion-input label="Nombre" label-placement="floating" fill="outline" formControlName="nombre"></ion-input>
+        <ion-input label="Apellido" label-placement="floating" fill="outline" formControlName="apellido"></ion-input>
+        <ion-input label="Edad" label-placement="floating" fill="outline" formControlName="edad"></ion-input>
+        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="email@gmail.com" formControlName="email"></ion-input>
+        <ion-input label="Contraseña" label-placement="floating" fill="outline" formControlName="contraseña" type="password"></ion-input>
+      </form>
+      <br>
+      <ion-button (click)="onSave()" [disabled]="formRegistro.invalid">Registrarse</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

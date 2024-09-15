@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Ingresar
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form class="formulario" [formGroup]="formLogin">
+        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="email@gmail.com" formControlName="email"></ion-input>
+        <ion-input label="Contraseña" label-placement="floating" fill="outline" formControlName="contraseña" type="password"></ion-input>
+      </form>
+      <br>
+      <ion-button (click)="ingresar()" [disabled]="formLogin.invalid">Ingresar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="div-registro">
+    <h4>¿Aún no has creado tu cuenta? <a href="/registro">Regístrate</a></h4>
+  </div>
+  
+</ion-content>

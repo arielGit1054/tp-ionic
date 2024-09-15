@@ -1,0 +1,29 @@
+.formulario{
+    width: 100%;
+}
+
+ion-card-content ion-input{
+    margin-bottom: 10px;
+}
+
+ion-card-title{
+    text-align: center;
+}
+
+ion-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.div-registro h4 {
+    font-size: 15px; /* Ajusta el tamaño que desees */
+  }

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Modificar perfil
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form class="formulario" [formGroup]="formPerfil">
+        <ion-input label="Nombre" label-placement="floating" fill="outline" formControlName="nombre"></ion-input>
+        <ion-input label="Apellido" label-placement="floating" fill="outline" formControlName="apellido"></ion-input>
+        <ion-input label="Edad" label-placement="floating" fill="outline" formControlName="edad"></ion-input>
+        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="email@gmail.com" formControlName="email"></ion-input>
+        <ion-input label="Contraseña" label-placement="floating" fill="outline" formControlName="contraseña" ></ion-input>
+        <!-- Imagen de placeholder -->
+        <div class="image-placeholder">
+          <img [src]="imageSrc" alt="Imagen de perfil" />
+          <ion-item>
+            <input type="file" (change)="onFileChange($event)"/>
+          </ion-item>
+        </div>
+      </form>
+      <br>
+      <ion-button (click)="modificar()" [disabled]="formPerfil.invalid">Modificar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
